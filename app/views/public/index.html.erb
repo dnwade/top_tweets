@@ -1,0 +1,13 @@
+<div class="filter">
+	<h3>Current Filter</h3>
+	<!--  <p id="current-filter"></p> -->
+	<input type="text" name="current-filter" id="current-filter">
+	<button type="submit" class="submit">Update</button>
+</div>
+
+<%= content_for :head do %>
+	<script>window.StandaloneServerPort = <%= STANDALONE_SERVER_PORT %>;</script>
+<% end %>
+
+<h1>Tweets</h1>
+<div id="tweets"></div>

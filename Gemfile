@@ -6,6 +6,8 @@ gem 'tweetstream', github: 'tweetstream/tweetstream'
 gem 'mongoid'
 gem 'pry-rails'
 gem 'pry-stack_explorer'
+gem 'sidekiq'
+gem 'foreman'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
