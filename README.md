@@ -5,7 +5,7 @@ Updates top tweets in realtime. Search twitter for the top tweets (based on the 
 Uses websockets, rails, redis, and mongodb. In particular [websocket-rails](https://github.com/websocket-rails/websocket-rails) and [tweetstream](https://github.com/tweetstream/tweetstream)
 
 ## Getting Started
-*Clone repository
-*Run bundler: ```bundle```
-*Start rails: ```rails s```
-*Start foreman: ```foreman start```
+* Clone repository
+* Run bundler: ```bundle```
+* Start rails: ```rails s```
+* Start foreman: ```foreman start```
