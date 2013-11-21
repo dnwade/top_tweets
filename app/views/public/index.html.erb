@@ -1,13 +1,20 @@
-<div class="filter">
-	<h3>Current Filter</h3>
-	<!--  <p id="current-filter"></p> -->
-	<input type="text" name="current-filter" id="current-filter">
-	<button type="submit" class="submit">Update</button>
-</div>
-
 <%= content_for :head do %>
 	<script>window.StandaloneServerPort = <%= STANDALONE_SERVER_PORT %>;</script>
 <% end %>
 
-<h1>Tweets</h1>
-<div id="tweets"></div>
+<div class="container">
+	<h2>Top Tweet Streamer</h2>
+	<div class="filter">
+		<h3>Current Filter <span class="label label-primary js-currentFilter"></span></h3>
+		<form class="form js-updateFilter">
+			<input type="text" name="current-filter" id="current-filter">
+			<button type="submit" class="btn btn-info btn-sm">Update</button>
+		</form>
+	</div>
+
+
+	<div class="Tweets">
+		<h1>Tweets</h1>
+		<div class="js-tweets"></div>
+	</div>
+</div>
