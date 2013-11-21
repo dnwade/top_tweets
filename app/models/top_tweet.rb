@@ -15,7 +15,6 @@ class TopTweet
       matching[0].retweet_count = tweet.retweet_count # update
     elsif tweets.size < MAXLEN
       tweets.build(retweet_count: tweet.retweet_count, text: tweet.text, name: tweet.user.name)
-    # elsif sorted_tweets.last.retweet_count < tweet.retweet_count
     elsif (min_retweet = tweets.min(:retweet_count)) < tweet.retweet_count
       rejected = tweets.where(retweet_count: min_retweet)[0]
       rejected.delete

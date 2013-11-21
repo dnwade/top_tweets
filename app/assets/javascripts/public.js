@@ -32,12 +32,3 @@ $(function() {
     dispatcher.trigger('twitter.filter', {new_track: $('#current-filter').val()});
   });
 });
-
-// streaming (incoming)
-var tweet, $el;
-chan.bind('track_streaming', function(data) {
-  data = JSON.parse(data);
-  tweet = new Tweet(data);
-  $el = $('<p>', {class: 'tweet', text: tweet.toString()});
-  $('#tweets').append($el)
-});
