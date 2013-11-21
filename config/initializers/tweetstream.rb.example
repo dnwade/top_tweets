@@ -1,0 +1,8 @@
+require 'tweetstream'
+TweetStream.configure do |config|
+  config.consumer_key       = 'your_consumer_key'
+  config.consumer_secret    = 'your_consumer_secret'
+  config.oauth_token        = 'your_oath_token'
+  config.oauth_token_secret = 'your_oath_token_secret'
+  config.auth_method        = :oauth
+end

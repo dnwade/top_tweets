@@ -9,5 +9,6 @@ Uses websockets, rails, redis, and mongodb. In particular [websocket-rails](http
 * install Redis
 * Clone repository
 * Run bundler: ```bundle```
+* add your twitter api credentials: ```cp config/initializers/tweetstream.rb.example config/initializers/tweetstream.rb```
 * Start rails: ```rails s```
 * Start foreman: ```foreman start```
