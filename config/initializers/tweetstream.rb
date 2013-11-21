@@ -1,5 +1,4 @@
 require 'tweetstream'
-
 TweetStream.configure do |config|
   config.consumer_key       = 'UwcAfsCMtyXzCwFQQthAYQ'
   config.consumer_secret    = '2H1HuGYszcb9owgMzuZUL64Jhs3Kq2xIovSUI54vx4'
