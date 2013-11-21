@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.15'
 
-gem 'websocket-rails', github: 'moaa/websocket-rails', :branch => 'foreman_integration'
+gem 'websocket-rails', github: 'websocket-rails/websocket-rails'
 gem 'tweetstream', github: 'tweetstream/tweetstream'
 gem 'mongoid'
 gem 'foreman'
