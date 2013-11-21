@@ -1,3 +1,3 @@
-tweetstream: bundle exec rake twitter:sample
-worker: bundle exec sidekiq --logfile log/sidekiq.log
-websockets: bin/websockets.rb
+tweetstream: bundle exec rake twitter:track
+websockets: bundle exec rake websocket_rails:start_server
+# websockets: bin/websockets.rb

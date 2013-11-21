@@ -1,18 +1,14 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.15'
-gem 'websocket-rails', github: 'websocket-rails/websocket-rails'
+
+gem 'websocket-rails', github: 'moaa/websocket-rails', :branch => 'foreman_integration'
 gem 'tweetstream', github: 'tweetstream/tweetstream'
 gem 'mongoid'
-gem 'pry-rails'
-gem 'pry-stack_explorer'
-gem 'sidekiq'
 gem 'foreman'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-
+gem 'pry-rails'
+gem 'pry-stack_explorer'
 
 # Gems used only for assets and not required
 # in production environments by default.

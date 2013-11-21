@@ -17,7 +17,7 @@ Tweet.prototype.toString = function() {
 }
 
 var tweet, $el;
-chan.bind('sample', function(data) {
+chan.bind('track', function(data) {
   data = JSON.parse(data);
   tweet = new Tweet(data);
   $el = $('<p>', {class: 'tweet', text: tweet.toString()});

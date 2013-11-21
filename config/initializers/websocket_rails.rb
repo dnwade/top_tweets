@@ -1,6 +1,7 @@
 STANDALONE_SERVER_PORT = 3030
 
 WebsocketRails.setup do |config|
+  config.daemonize = false
 
   # Uncomment to override the default log level. The log level can be
   # any of the standard Logger log levels. By default it will mirror the
