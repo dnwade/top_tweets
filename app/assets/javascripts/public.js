@@ -1,7 +1,6 @@
 var url = location.host.replace(location.port, window.StandaloneServerPort) + '/websocket',
     dispatcher = new WebSocketRails(url),
-    chan = dispatcher.subscribe('twitter'),
-    text, tweets, topTweets, tweet, ul, li, tweet_container, tweet_text, tweet_count, tweet_author;
+    chan = dispatcher.subscribe('twitter');
 
 var Tweet = function Tweet(tweet, placement) {
   this.retweetCount = tweet.retweet_count;
@@ -9,10 +8,6 @@ var Tweet = function Tweet(tweet, placement) {
   this.text = tweet.text;
   this.placement = placement;
 };
-
-Tweet.prototype.toString = function() {
-  return this.name + ' :: ' + this.text + ' [' + this.retweetCount + '] :: ' + this.placement;
-}
 
 Tweet.prototype.toHtml = function() {
   var container, text, retweetCount, author, tweetMeta;
