@@ -24,7 +24,7 @@ namespace :twitter do
 
     # push existing to client
     data = {top_ten: top_ten.sorted_tweets, track: track, filter_change: true}
-    WebsocketRails[:twitter].trigger :track_top10, data.to_json
+    WebsocketRails[:twitter].trigger :track_top10, data
 
     client = TweetStream::Client.new
 
@@ -35,7 +35,7 @@ namespace :twitter do
           client.stream.update(:params => {:track => track})
           top_ten = TopTweet.find_or_create_by(filter: track)
           data = {top_ten: top_ten.sorted_tweets, track: track, filter_change: true}
-          WebsocketRails[:twitter].trigger :track_top10, data.to_json
+          WebsocketRails[:twitter].trigger :track_top10, data
         end
       end
     end
@@ -45,7 +45,7 @@ namespace :twitter do
       if Twitter::Tweet === (retweet = tweet.retweeted_status) && retweet.lang == 'en'
         if top_ten.examine(retweet)
           data = {top_ten: top_ten.sorted_tweets, track: track, filter_change: false}
-          WebsocketRails[:twitter].trigger :track_top10, data.to_json
+          WebsocketRails[:twitter].trigger :track_top10, data
         end
       end
     end

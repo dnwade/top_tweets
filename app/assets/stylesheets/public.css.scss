@@ -2,6 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.filter-string {
+	background-color: rgb(95, 158, 160);
+	font-size: 18px;
+	padding: 5px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.heading {
+	text-transform: uppercase;
+}
+
+.top-tweets {
+	list-style-type: none;
+}
+
+.Tweet-author {
+	font-style: italic;
+}
+
 .Tweet-count {
 	margin-left: 1em;
 }

@@ -14,6 +14,6 @@ WebsocketRails::EventMap.describe do
 
   namespace :twitter do
     subscribe :filter, 'twitter#filter_change'
+    subscribe :send_latest, 'twitter#send_latest'
   end
-  subscribe :client_connected, 'twitter#client_connected'
 end

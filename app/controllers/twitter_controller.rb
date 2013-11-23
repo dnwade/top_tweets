@@ -3,15 +3,13 @@ class TwitterController < WebsocketRails::BaseController
     set_track_string(data["new_track"])
   end
 
-  # todo: dry (between this & tweetstream.rake)
-  def client_connected
+  def send_latest
     track = get_track_string || (set_track_string('voice') && 'voice')
     top_ten = TopTweet.find_or_create_by(filter: track)
-
-    # push existing to client
     data = {top_ten: top_ten.sorted_tweets, track: track, filter_change: true}
-    WebsocketRails[:twitter].trigger :track_top10, data.to_json
+    WebsocketRails[:twitter].trigger :track_top10, data
   end
+
 
   private
   def set_track_string(value)

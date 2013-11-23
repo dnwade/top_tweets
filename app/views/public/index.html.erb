@@ -3,18 +3,31 @@
 <% end %>
 
 <div class="container">
-	<h2>Top Tweet Streamer</h2>
 	<div class="filter">
-		<h3>Current Filter <span class="label label-primary js-currentFilter"></span></h3>
-		<form class="form js-updateFilter">
-			<input type="text" name="current-filter" id="current-filter">
-			<button type="submit" class="btn btn-info btn-sm">Update</button>
-		</form>
-	</div>
+		<div class="row">
+			<div class="col-md-9 col-sm-6">
+				<h3 class="heading">Hottest Retweeted Tweets<small> realtime!</small></h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-9 col-md-3 col-sm-offset-6 col-sm-6">
+				<form class="form js-updateFilter">
+					<div class="input-group">
+						<input type="text" name="current-filter" id="current-filter" class="form-control">
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-info">Go</button>
+						</span>
+					</div>
+				</form>
+			</div>
+		</div><!-- row -->
+	</div><!-- filter -->
 
-
-	<div class="Tweets">
-		<h1>Tweets</h1>
-		<div class="js-tweets"></div>
+	<br/>
+	<div class="panel panel-primary">
+		<div class="panel-heading">Filtered by &nbsp;&nbsp;&nbsp;<span class="js-currentFilter filter-string">...</span></div>
+		<div class="panel-body">
+			<ul class="top-tweets"></ul>
+		</div>
 	</div>
 </div>
