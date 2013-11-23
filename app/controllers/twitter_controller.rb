@@ -6,10 +6,9 @@ class TwitterController < WebsocketRails::BaseController
   def send_latest
     track = get_track_string || (set_track_string('voice') && 'voice')
     top_ten = TopTweet.find_or_create_by(filter: track)
-    data = {top_ten: top_ten.sorted_tweets, track: track, filter_change: true}
+    data = {top_ten: top_ten.sorted_tweets, track: track, filter_change: false}
     WebsocketRails[:twitter].trigger :track_top10, data
   end
-
 
   private
   def set_track_string(value)

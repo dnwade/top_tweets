@@ -39,6 +39,7 @@ dispatcher.on_open = function(data) {
 // top 10 (incoming)
 chan.bind('track_top10', function(data) {
   var tweetsContainer = $('.top-tweets');
+  tweetsContainer.html('');
   if (typeof data === 'string') data = JSON.parse(data);
   $.each(data.top_ten, function(idx, tweet) {
     tweet = new Tweet(tweet, idx+1);
