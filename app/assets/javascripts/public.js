@@ -32,7 +32,6 @@ Tweet.prototype.toHtml = function() {
 }
 
 dispatcher.on_open = function(data) {
-  console.log("on open", data);
   dispatcher.trigger('twitter.send_latest');
 };
 
